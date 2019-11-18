@@ -1,12 +1,12 @@
 {
   "name": "eslint-config-ajtp",
-  "version": "0.0.3",
+  "version": "0.0.2",
   "description": "ESLint config (Airbnb + Jest + Prettier + Typescript ) ",
   "scripts": {
     "test": "jest",
     "lint": "eslint \"__tests__/**.ts\" --fix",
     "commit": "git-cz",
-    "release": "yarn test && standard-version test && standard-version"
+    "release": "yarn test && standard-version test && standard-version --first-release"
   },
   "main": "index.js",
   "repository": "https://github.com/yelingfeng/eslint-config-ajtp.git",
