@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ajtp",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ESLint config (Airbnb + Jest + Prettier + Typescript ) ",
   "scripts": {
     "test": "jest",
