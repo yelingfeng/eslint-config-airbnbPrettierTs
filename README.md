@@ -1,2 +1,2 @@
-# eslint-config-airbnbPrettierTs
-Airbnb-Base 、TypeScript、Prettier
+# eslint-config-ajtp
+Airbnb-Base 、Jest 、TypeScript、Prettier

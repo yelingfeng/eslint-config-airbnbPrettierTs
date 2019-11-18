@@ -1,0 +1,68 @@
+{
+  "name": "eslint-config-ajtp",
+  "version": "0.0.1",
+  "description": "ESLint config (Airbnb + Jest + Prettier + Typescript ) ",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint \"__tests__/**.ts\" --fix",
+    "commit": "git-cz",
+    "release": "yarn test && standard-version test && standard-version"
+  },
+  "main": "index.js",
+  "repository": "https://github.com/yelingfeng/eslint-config-ajtp.git",
+  "author": "yelingfeng <yelingfeng521@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.7.0",
+    "@typescript-eslint/parser": "^2.7.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.6.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^23.0.4",
+    "eslint-plugin-prettier": "^3.1.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
+    "eslint": "^6.6.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
+    "standard-version": "^7.0.0",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.7.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,json,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{js,ts?(x)}": [
+      "prettier --write & eslint \"packages/**\" --fix",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "semi": false
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "keywords": [
+    "eslint",
+    "airbnb-base",
+    "typescript",
+    "prettier",
+    "jest"
+  ]
+}
