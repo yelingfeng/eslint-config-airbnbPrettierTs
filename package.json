@@ -44,7 +44,7 @@
       "git add"
     ],
     "*.{js,ts?(x)}": [
-      "prettier --write & eslint \"packages/**\" --fix",
+      "yarn lint & yarn test",
       "git add"
     ]
   },
